@@ -5,216 +5,113 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Projets — Luc Zhang, BTS SIO option SLAM</title>
 <meta name="description" content="Crypto Anomaly Analyser, application de recommandation, sites web et projets personnels. Réalisations scolaires, professionnelles et personnelles.">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 <a class="evitement" href="#contenu">Aller au contenu</a>
 
-<!-- #header -->
 <header class="entete">
   <div class="conteneur entete-ligne">
     <a class="logo" href="index.html">LZ</a>
-    <button class="bouton-menu" id="bouton-menu" type="button" aria-expanded="false">Menu</button>
-    <nav class="menu" id="menu" aria-label="Navigation principale">
-      <ul>
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="profil.html">Profil</a></li>
-        <li><a href="bts-sio.html">BTS SIO</a></li>
-        <li class="parent">
-          <a href="competences.html">Compétences</a>
-          <ul class="sous-menu">
-            <li><a href="competences.html">Référentiel<span>Les compétences et leurs preuves</span></a></li>
-            <li><a href="certifications.html">Certifications</a></li>
-          </ul>
-        </li>
-        <li class="parent">
-          <a href="stage-1.html">Stage</a>
-          <ul class="sous-menu">
-            <li><a href="stage-1.html">1<sup>re</sup> année<span>ZENG Expertise — effectué</span></a></li>
-            <li><a href="stage-2.html">2<sup>e</sup> année<span>À venir</span></a></li>
-          </ul>
-        </li>
-        <li><a href="projets.html" aria-current="page">Projets</a></li>
-        <li><a href="veille.html">Veille</a></li>
-        <li><a href="contact.html" class="lien-contact">Contact</a></li>
-      </ul>
+    <nav class="menu" aria-label="Navigation principale">
+      <a href="index.html">Accueil</a>
+      <a href="competences.html">Compétences</a>
+      <a href="stage-1.html">Stage</a>
+      <a href="projets.html" aria-current="page">Projets</a>
+      <a href="veille.html">Veille</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </div>
 </header>
-<!-- /#header -->
 
 <main id="contenu">
 
 <section class="entete-page">
   <div class="conteneur">
-    <p class="fil-ariane"><a href="index.html">Accueil</a> / Projets</p>
     <h1>Projets</h1>
-    <p>Réalisations professionnelles, scolaires et personnelles. Chaque fiche indique le contexte, la technique et l'état d'avancement.</p>
-    <ul class="infos">
-      <li>1 réalisation professionnelle</li>
-      <li>1 projet universitaire</li>
-      <li>3 projets personnels</li>
-    </ul>
+    <p>Réalisations professionnelles, scolaires et personnelles.</p>
   </div>
 </section>
 
 <section class="section">
   <div class="conteneur">
-    <p class="etiquette">(01) — Projet phare</p>
-    <h2>Crypto Anomaly Analyser.</h2>
+    <h2>Crypto Anomaly Analyser</h2>
     <p>Un tableau de bord qui surveille le cours du Bitcoin en continu, détecte les mouvements de prix statistiquement anormaux, puis cherche dans l'actualité s'il existe une explication à ce mouvement.</p>
-
-    <img class="image-cadre" src="assets/img/crypto-dashboard.jpg" alt="Tableau de bord affichant le cours du Bitcoin sur 24 heures avec une zone d'anomalie signalée" loading="lazy">
-
-    <div class="grille-2 espace-haut">
-      <div>
-        <h3>Détecter l'anomalie, puis l'expliquer</h3>
-        <p>Le prix est échantillonné en bougies de cinq minutes. Un score statistique mesure l'écart à la normale sur vingt-quatre heures ; au-delà d'un seuil, un épisode s'ouvre. Le système croise alors les titres d'actualité de la période pour trancher entre <em>expliqué par une actualité</em> et <em>marché normal, sans cause identifiée</em>. Chaque épisode est archivé et rejouable.</p>
-        <p>
-          <span class="tag">Python</span><span class="tag">PostgreSQL</span><span class="tag">pgvector</span><span class="tag">RAG</span><span class="tag">API de marché</span><span class="tag">Flux d'actualités</span>
-        </p>
-        <a class="bouton" href="stage-1.html">Le contexte du stage</a>
-        <a class="bouton bouton-clair" href="https://github.com/Zeng-Zer/crypto-analyser">Code sur GitHub</a>
-      </div>
-      <div>
-        <p class="etiquette gris">Repères</p>
-        <dl class="fiche">
-          <dt>Cadre</dt><dd>Stage ZENG Expertise</dd>
-          <dt>Rôle</dt><dd>Back-end et data</dd>
-          <dt>Début</dt><dd>Mai 2026</dd>
-          <dt>État</dt><dd>Poursuivi</dd>
-        </dl>
-        <p class="gris">Le chantier dépassait les cinq semaines de stage. Le projet a continué au-delà de l'échéance, avec un recentrage sur l'architecture RAG demandé par le tuteur.</p>
-      </div>
+    <p>Le prix est échantillonné en bougies de cinq minutes. Un score statistique mesure l'écart à la normale sur vingt-quatre heures ; au-delà d'un seuil, un épisode s'ouvre. Le système croise alors les titres d'actualité de la période pour trancher entre <em>expliqué par une actualité</em> et <em>marché normal, sans cause identifiée</em>. Chaque épisode est archivé et rejouable.</p>
+    <p><span class="tag">Python</span><span class="tag">PostgreSQL</span><span class="tag">pgvector</span><span class="tag">RAG</span><span class="tag">API de marché</span><span class="tag">Flux d'actualités</span></p>
+    <div class="grille-2">
+      <figure>
+        <img src="assets/img/crypto-dashboard.jpg" alt="Tableau de bord affichant le cours du Bitcoin sur 24 heures avec une zone d'anomalie signalée" loading="lazy">
+        <figcaption>Suivi du cours en bougies de 5 minutes, avec repérage visuel de l'épisode d'anomalie en cours.</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/crypto-detector.jpg" alt="Détecteur d'anomalies, indicateurs de marché, fil d'actualité et historique des épisodes détectés" loading="lazy">
+        <figcaption>Détecteur, indicateurs de marché, fil d'actualité et historique rejouable des épisodes.</figcaption>
+      </figure>
     </div>
-
-    <figure class="espace-haut">
-      <img src="assets/img/crypto-detector.jpg" alt="Détecteur d'anomalies, indicateurs de marché, fil d'actualité et historique des épisodes détectés" loading="lazy">
-      <figcaption>Détecteur, indicateurs de marché, fil d'actualité et historique rejouable des épisodes.</figcaption>
-    </figure>
+    <p class="espace-haut">
+      <a class="bouton" href="stage-1.html">Le contexte du stage</a>
+      <a class="bouton bouton-clair" href="https://github.com/Zeng-Zer/crypto-analyser">Code sur GitHub</a>
+    </p>
   </div>
 </section>
 
 <section class="section">
   <div class="conteneur">
-    <p class="etiquette">(02) — Autres réalisations</p>
-    <h2>Scolaires et personnelles.</h2>
-    <div class="grille-3">
+    <h2>Autres réalisations</h2>
+    <div class="grille-2">
       <article class="carte">
-        <span class="tag">Universitaire</span>
         <span class="statut statut-ok">Effectué</span>
         <h3>Application de recommandation de livres</h3>
-        <p class="gris">Développement et présentation d'un cas d'étude en Python, en équipe. Premier contact avec la logique de recommandation — celle-là même qui fait aujourd'hui l'objet de la veille technologique.</p>
-        <p><span class="tag">Python</span><span class="tag">Travail en équipe</span></p>
+        <p class="gris">Développement et présentation d'un cas d'étude en Python, en équipe.</p>
         <p class="gris">Artèque Paris · 2024</p>
       </article>
-
       <article class="carte">
-        <span class="tag">Personnel</span>
-        <span class="statut statut-attente">En cours</span>
-        <h3>Boutique de hangboards et poignées de traction</h3>
-        <p class="gris">Site de vente destiné aux pratiquants de calisthénie : catalogue, fiches produit et parcours d'achat. <span class="todo">description technique à compléter</span></p>
-        <p><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span></p>
-        <p class="gris">2026</p>
-      </article>
-
-      <article class="carte">
-        <span class="tag">Personnel</span>
-        <span class="statut statut-attente">En cours</span>
-        <h3>Site vitrine pour un commerce</h3>
-        <p class="gris">Présentation d'une activité commerciale : identité, offre et informations pratiques. <span class="todo">nom du commerce et détails à compléter</span></p>
-        <p><span class="tag">HTML</span><span class="tag">CSS</span></p>
-        <p class="gris">2026</p>
-      </article>
-
-      <article class="carte">
-        <span class="tag">Personnel</span>
-        <span class="statut statut-attente">En cours</span>
-        <h3>Application fitness</h3>
-        <p class="gris">Suivi d'entraînement et de progression. Le sujet vient de la pratique : calisthénie et musculation. <span class="todo">périmètre fonctionnel à préciser</span></p>
-        <p><span class="tag">à compléter</span></p>
-        <p class="gris">2026</p>
-      </article>
-
-      <article class="carte">
-        <span class="tag tag-slam">En ligne</span>
         <span class="statut statut-ok">Livré</span>
         <h3>Ce portfolio</h3>
         <p class="gris">Écrit à la main, sans framework ni générateur : structure sémantique, accessibilité et hébergement sur GitHub Pages.</p>
-        <p><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">Git</span></p>
-        <p class="gris">2026 <a href="https://github.com/luckk11">Sources</a></p>
+        <p class="gris">2026 · <a href="https://github.com/luckk11/portfolio-bts-sio-simple">Sources</a></p>
       </article>
-
-      <article class="carte carte-pointillee">
-        <span class="tag">2<sup>e</sup> année</span>
-        <span class="statut statut-attente">À venir</span>
-        <h3>Projets de deuxième année</h3>
-        <p class="gris">Les réalisations menées en cours de formation et lors du stage de deuxième année viendront s'ajouter ici, avec les compétences du référentiel correspondantes.</p>
-        <p><span class="tag">à venir</span></p>
-        <p class="gris">2026 — 2027</p>
+      <article class="carte">
+        <span class="statut statut-attente">En cours</span>
+        <h3>Boutique de hangboards et poignées de traction</h3>
+        <p class="gris">Site de vente destiné aux pratiquants de calisthénie : catalogue, fiches produit et parcours d'achat.</p>
+        <p class="gris">2026</p>
       </article>
-    </div>
-
-    <div class="note">
-      <b>Fiches détaillées.</b> Chaque projet personnel aura sa fiche complète — contexte, modèle de données, captures, difficultés, résultat — au fur et à mesure de leur avancement. <span class="todo">captures et descriptions à fournir</span>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="conteneur">
-    <div class="bloc-contact">
-      <p class="etiquette">Contact</p>
-      <h2>Un projet <em>data</em> ?</h2>
-      <a class="mail" href="mailto:zhg.luc2909@gmail.com">zhg.luc2909@gmail.com</a>
-      <div>
-        <a class="bouton bouton-blanc" href="competences.html">Les compétences prouvées</a>
-        <a class="bouton bouton-blanc" href="assets/docs/cv-luc-zhang.pdf" download>Le CV en PDF</a>
-      </div>
+      <article class="carte">
+        <span class="statut statut-attente">En cours</span>
+        <h3>Site vitrine pour un commerce</h3>
+        <p class="gris">Présentation d'une activité commerciale : identité, offre et informations pratiques.</p>
+        <p class="gris">2026</p>
+      </article>
+      <article class="carte">
+        <span class="statut statut-attente">En cours</span>
+        <h3>Application fitness</h3>
+        <p class="gris">Suivi d'entraînement et de progression.</p>
+        <p class="gris">2026</p>
+      </article>
     </div>
   </div>
 </section>
 
 </main>
 
-<!-- #footer -->
 <footer class="pied">
+  <div class="conteneur pied-ligne">
+    <p>Luc Zhang — BTS SIO option SLAM<br>Rosny-sous-Bois, Île-de-France</p>
+    <nav aria-label="Liens externes">
+      <a href="https://www.linkedin.com/in/luczhang8/">LinkedIn</a>
+      <a href="https://github.com/luckk11">GitHub</a>
+      <a href="https://www.pearltrees.com/lucque">Pearltrees</a>
+      <a href="mailto:zhg.luc2909@gmail.com">E-mail</a>
+      <a href="mentions-legales.html">Mentions légales</a>
+    </nav>
+  </div>
   <div class="conteneur">
-    <div class="pied-colonnes">
-      <div>
-        <p class="logo">LZ</p>
-        <p class="gris">Luc Zhang — BTS SIO option SLAM<br>Rosny-sous-Bois, Île-de-France</p>
-      </div>
-      <nav aria-label="Pages du site">
-        <a href="profil.html">Profil</a>
-        <a href="bts-sio.html">BTS SIO</a>
-        <a href="competences.html">Compétences</a>
-        <a href="stage-1.html">Stage</a>
-        <a href="projets.html">Projets</a>
-        <a href="veille.html">Veille</a>
-        <a href="certifications.html">Certifications</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-      <nav aria-label="Liens externes">
-        <a href="https://www.linkedin.com/in/luczhang8/">LinkedIn</a>
-        <a href="https://github.com/luckk11">GitHub</a>
-        <a href="https://www.pearltrees.com/lucque">Pearltrees</a>
-        <a href="mailto:zhg.luc2909@gmail.com">E-mail</a>
-      </nav>
-    </div>
-    <div class="pied-bas">
-      <span>Dernière mise à jour : octobre 2026 — site écrit à la main en HTML, CSS et JavaScript, hébergé sur GitHub Pages</span>
-      <nav aria-label="Pages annexes">
-        <a href="a-propos.html">À propos du site</a>
-        <a href="mentions-legales.html">Mentions légales</a>
-        <a href="plan-du-site.html">Plan du site</a>
-      </nav>
-    </div>
+    Dernière mise à jour : novembre 2026 — site écrit à la main en HTML et CSS, hébergé sur GitHub Pages
   </div>
 </footer>
-<!-- /#footer -->
 
-<script src="assets/js/main.js"></script>
 </body>
 </html>

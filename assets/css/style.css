@@ -1,6 +1,4 @@
-/* ==============================
-   Couleurs
-   ============================== */
+/* Couleurs */
 :root {
   --bleu: #183FBA;
   --bleu-vif: #4776F5; /* trop clair pour du texte : aplats uniquement */
@@ -14,13 +12,9 @@
   --vert-fond: #E1F5EE;
   --orange: #A64C08;
   --orange-fond: #FAEEDA;
-  --violet: #7A3FBF;
-  --violet-fond: #F1EAFB;
 }
 
-/* ==============================
-   Base
-   ============================== */
+/* Base */
 * {
   box-sizing: border-box;
 }
@@ -47,20 +41,21 @@ h1 {
 }
 
 h2 {
-  font-size: 32px;
+  font-size: 30px;
 }
 
 h3 {
-  font-size: 21px;
+  font-size: 20px;
 }
 
 p {
   margin: 0 0 16px;
 }
 
-ul {
+ul,
+ol {
   margin: 0 0 16px;
-  padding-left: 20px;
+  padding-left: 22px;
 }
 
 li {
@@ -72,6 +67,7 @@ a {
 }
 
 img {
+  display: block;
   max-width: 100%;
   height: auto;
 }
@@ -90,28 +86,24 @@ img {
 .evitement:focus {
   left: 10px;
   top: 10px;
-  z-index: 20;
   padding: 10px 16px;
   background: var(--bleu);
   color: var(--blanc);
 }
 
-/* ==============================
-   Mise en page
-   ============================== */
+/* Mise en page */
 .conteneur {
-  max-width: 1100px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
 .section {
-  padding: 50px 0;
+  padding: 45px 0;
 }
 
 .grille-2,
-.grille-3,
-.grille-4 {
+.grille-3 {
   display: grid;
   gap: 20px;
 }
@@ -124,10 +116,6 @@ img {
   grid-template-columns: repeat(3, 1fr);
 }
 
-.grille-4 {
-  grid-template-columns: repeat(4, 1fr);
-}
-
 .espace-haut {
   margin-top: 24px;
 }
@@ -136,54 +124,17 @@ img {
   color: var(--gris);
 }
 
-/* Section sur fond bleu */
-.bloc-bleu {
-  background: var(--bleu);
-  color: var(--blanc);
-}
-
-.bloc-bleu .etiquette {
-  color: var(--bleu-pale);
-}
-
-.bloc-bleu .tag {
-  background: rgba(255, 255, 255, 0.16);
-  color: var(--blanc);
-}
-
-.bloc-bleu .todo {
-  background: rgba(255, 255, 255, 0.16);
-  color: var(--blanc);
-}
-
-.bloc-bleu .chiffre b,
-.bloc-bleu .chiffre span {
-  color: var(--blanc);
-}
-
-.bloc-bleu :focus-visible {
-  outline-color: var(--blanc);
-}
-
-.separation {
-  margin-top: 30px;
-  padding-top: 24px;
-  border-top: 1px solid var(--bleu-pale);
-}
-
-/* ==============================
-   En-tête et menu
-   ============================== */
+/* En-tête et menu */
 .entete {
-  background: var(--blanc);
   border-bottom: 3px solid var(--bleu-vif);
 }
 
 .entete-ligne {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
+  gap: 8px 20px;
   padding-top: 12px;
   padding-bottom: 12px;
 }
@@ -196,37 +147,14 @@ img {
   text-decoration: none;
 }
 
-.bouton-menu {
-  display: none;
-  padding: 8px 16px;
-  background: var(--fond-clair);
-  border: 1px solid var(--bordure);
-  border-radius: 6px;
-  color: var(--texte);
-  font: inherit;
-  cursor: pointer;
-}
-
-.menu ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.menu > ul {
+.menu {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   gap: 4px;
 }
 
-.menu li {
-  position: relative;
-  margin: 0;
-}
-
 .menu a {
-  display: block;
-  padding: 8px 12px;
+  padding: 6px 12px;
   border-radius: 6px;
   color: var(--texte);
   font-size: 16px;
@@ -239,55 +167,22 @@ img {
   color: var(--bleu);
 }
 
-.menu a.lien-contact,
-.menu a.lien-contact:hover {
-  margin-left: 8px;
-  background: var(--bleu);
-  color: var(--blanc);
-}
-
-.menu .sous-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  z-index: 10;
-  min-width: 270px;
-  padding: 6px;
-  background: var(--blanc);
-  border: 1px solid var(--bordure);
-  border-radius: 6px;
-}
-
-.menu .parent:hover .sous-menu,
-.menu .parent:focus-within .sous-menu {
-  display: block;
-}
-
-.sous-menu span {
-  display: block;
-  color: var(--gris);
-  font-size: 15px;
-}
-
-/* ==============================
-   Hauts de page
-   ============================== */
+/* Hauts de page */
 .accueil {
-  padding: 60px 0;
+  padding: 50px 0;
   background: var(--fond-clair);
   text-align: center;
 }
 
 .accueil h1 {
   margin-bottom: 12px;
-  font-size: 60px;
+  font-size: 52px;
 }
 
 .accueil h1 span {
   display: block;
   color: var(--texte);
-  font-size: 28px;
+  font-size: 26px;
   font-weight: 500;
 }
 
@@ -297,52 +192,38 @@ img {
 }
 
 .entete-page {
-  padding: 40px 0;
+  padding: 36px 0;
   background: var(--fond-clair);
 }
 
-.fil-ariane {
-  margin-bottom: 10px;
-  font-size: 15px;
+.entete-page p {
+  margin-bottom: 0;
 }
 
-.infos {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
+/* Section sur fond bleu */
+.bloc-bleu {
+  background: var(--bleu);
+  color: var(--blanc);
 }
 
-.infos li {
-  margin: 0;
-  padding: 4px 14px;
-  background: var(--blanc);
-  border: 1px solid var(--bordure);
-  border-radius: 20px;
-  font-size: 15px;
+.bloc-bleu .etiquette {
+  color: var(--bleu-pale);
 }
 
-/* ==============================
-   Composants
-   ============================== */
+.bloc-bleu :focus-visible {
+  outline-color: var(--blanc);
+}
+
+/* Composants */
 .etiquette {
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   color: var(--bleu);
-  font-family: "JetBrains Mono", monospace;
-  font-size: 13px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
-
-.etiquette.gris {
-  color: var(--gris);
+  font-size: 15px;
+  font-weight: 600;
 }
 
 .carte {
-  padding: 24px;
-  background: var(--blanc);
+  padding: 22px;
   border: 1px solid var(--bordure);
   border-radius: 8px;
 }
@@ -351,23 +232,9 @@ img {
   margin-bottom: 0;
 }
 
-.carte-bleue {
-  border: 2px solid var(--bleu);
-}
-
-.carte-pointillee {
-  border-style: dashed;
-}
-
-.pile {
-  display: grid;
-  gap: 16px;
-  align-content: start;
-}
-
 .note {
-  margin: 24px 0;
-  padding: 16px 20px;
+  margin: 20px 0;
+  padding: 14px 18px;
   background: var(--fond-clair);
   border-left: 4px solid var(--bleu);
   color: var(--gris);
@@ -377,15 +244,11 @@ img {
   color: var(--texte);
 }
 
-.grille-2 > .note {
-  margin: 0;
-}
-
 .fiche {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 8px 16px;
-  margin: 0 0 16px;
+  margin: 0;
   font-size: 16px;
 }
 
@@ -399,24 +262,10 @@ img {
   text-align: right;
 }
 
-.chiffre b {
-  display: block;
-  color: var(--bleu);
-  font-family: Poppins, Arial, sans-serif;
-  font-size: 32px;
-  font-weight: 700;
-  line-height: 1.2;
-}
-
-.chiffre span {
-  color: var(--gris);
-  font-size: 15px;
-}
-
 .tag {
   display: inline-block;
   margin: 0 6px 6px 0;
-  padding: 3px 12px;
+  padding: 2px 12px;
   background: var(--fond-clair);
   border-radius: 20px;
   color: var(--bleu);
@@ -428,10 +277,15 @@ img {
   color: var(--blanc);
 }
 
+.bloc-bleu .tag {
+  background: var(--blanc);
+  color: var(--bleu);
+}
+
 .statut {
   display: inline-block;
-  margin-bottom: 6px;
-  padding: 3px 12px;
+  margin-bottom: 8px;
+  padding: 2px 12px;
   border-radius: 20px;
   font-size: 15px;
   font-weight: 500;
@@ -447,37 +301,24 @@ img {
   color: var(--orange);
 }
 
-/* Champ à compléter */
-.todo {
-  padding: 1px 8px;
-  background: var(--violet-fond);
-  border-radius: 6px;
-  color: var(--violet);
-  font-family: "JetBrains Mono", monospace;
-  font-size: 15px;
-}
-
 .bouton {
   display: inline-block;
   margin: 0 8px 8px 0;
   padding: 10px 20px;
   background: var(--bleu);
-  border: 0;
   border-radius: 6px;
   color: var(--blanc);
-  font: inherit;
   font-size: 16px;
   text-decoration: none;
-  cursor: pointer;
 }
 
 .bouton-clair {
-  background: var(--fond-clair);
-  border: 1px solid var(--bordure);
+  background: var(--blanc);
+  border: 1px solid var(--bleu);
   color: var(--bleu);
 }
 
-.bouton-blanc {
+.bloc-bleu .bouton {
   background: var(--blanc);
   color: var(--bleu);
 }
@@ -494,31 +335,6 @@ progress {
   white-space: nowrap;
 }
 
-/* Compétences en accordéon, sans JavaScript */
-details {
-  padding: 16px 0;
-  border-bottom: 1px solid var(--bordure);
-}
-
-summary {
-  font-family: Poppins, Arial, sans-serif;
-  font-size: 21px;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-.numero {
-  margin-right: 8px;
-  color: var(--gris);
-  font-family: "JetBrains Mono", monospace;
-  font-size: 13px;
-  font-weight: 400;
-}
-
-details p {
-  margin-top: 12px;
-}
-
 /* Frise du parcours */
 .frise {
   display: grid;
@@ -527,7 +343,7 @@ details p {
 }
 
 .frise > div {
-  padding-top: 14px;
+  padding-top: 12px;
   border-top: 3px solid var(--bleu-pale);
 }
 
@@ -535,20 +351,7 @@ details p {
   font-size: 16px;
 }
 
-.frise .etiquette {
-  font-size: 13px;
-}
-
-/* Stage */
-.logo-zeng {
-  margin-bottom: 20px;
-  padding: 24px;
-  background: #000000;
-  border-radius: 8px;
-  text-align: center;
-}
-
-/* Images et légendes */
+/* Images */
 figure {
   margin: 0;
   border: 1px solid var(--bordure);
@@ -557,50 +360,28 @@ figure {
 }
 
 figure img {
-  display: block;
   width: 100%;
 }
 
 figcaption {
-  padding: 12px 16px;
+  padding: 10px 14px;
   color: var(--gris);
   font-size: 15px;
 }
 
-.image-cadre {
-  display: block;
-  width: 100%;
-  border: 1px solid var(--bordure);
+.logo-zeng {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 18px;
+  padding: 20px;
+  background: #000000;
   border-radius: 8px;
 }
 
 .axe img {
-  display: block;
   width: 100%;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
   border-radius: 6px;
-}
-
-.emplacement-vide {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 200px;
-  margin-bottom: 20px;
-  padding: 20px;
-  border: 1px dashed var(--gris);
-  border-radius: 8px;
-  text-align: center;
-}
-
-.certif {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 24px;
-}
-
-.certif .emplacement-vide {
-  margin-bottom: 0;
 }
 
 /* Tableaux */
@@ -623,7 +404,7 @@ caption {
 
 th,
 td {
-  padding: 12px 14px;
+  padding: 10px 14px;
   border: 1px solid var(--bordure);
   text-align: left;
 }
@@ -632,216 +413,63 @@ th {
   background: var(--fond-clair);
 }
 
-/* Encadré de contact en bas de page */
-.bloc-contact {
-  padding: 40px 20px;
-  background: var(--bleu);
-  border-radius: 8px;
-  color: var(--blanc);
-  text-align: center;
-}
-
-.bloc-contact h2 {
-  font-size: 40px;
-}
-
-.bloc-contact em {
-  color: var(--bleu-pale);
-  font-style: normal;
-}
-
-.bloc-contact .etiquette {
-  color: var(--bleu-pale);
-}
-
-.bloc-contact .mail {
-  display: inline-block;
-  margin-bottom: 20px;
-  color: var(--blanc);
-  font-size: 20px;
-}
-
-.bloc-contact :focus-visible {
-  outline-color: var(--blanc);
-}
-
-/* Formulaire */
-.formulaire label {
-  display: block;
-  margin-bottom: 6px;
-  font-size: 16px;
-  font-weight: 500;
-}
-
-.formulaire input,
-.formulaire select,
-.formulaire textarea {
-  width: 100%;
-  margin-bottom: 16px;
-  padding: 10px 12px;
-  border: 1px solid var(--gris);
-  border-radius: 6px;
-  font: inherit;
-  font-size: 16px;
-}
-
-.formulaire textarea {
-  min-height: 160px;
-}
-
-.formulaire .case {
-  display: flex;
-  gap: 10px;
-  font-weight: 400;
-}
-
-.formulaire .case input {
-  flex: none;
-  width: 20px;
-  height: 20px;
-  margin: 4px 0 0;
-}
-
-.message-envoi {
-  color: var(--vert);
-  font-weight: 500;
-}
-
+/* Contact */
 .ligne-info {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  gap: 14px;
+  gap: 2px 14px;
   padding: 8px 0;
   border-top: 1px solid var(--bordure);
   font-size: 16px;
 }
 
-.ligne-info b,
-.ligne-info a {
-  font-weight: 500;
-  text-align: right;
-}
-
-.liste-liens {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-/* ==============================
-   Pied de page
-   ============================== */
+/* Pied de page */
 .pied {
-  margin-top: 40px;
-  padding: 40px 0 24px;
+  margin-top: 30px;
+  padding: 24px 0;
   border-top: 1px solid var(--bordure);
+  color: var(--gris);
   font-size: 15px;
 }
 
-.pied a {
-  color: var(--gris);
-}
-
-.pied-colonnes {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  gap: 24px;
-}
-
-.pied-colonnes nav a {
-  display: block;
-  margin-bottom: 4px;
-}
-
-.pied-bas {
+.pied-ligne {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 16px;
-  margin-top: 24px;
-  padding-top: 16px;
-  border-top: 1px solid var(--bordure);
+  gap: 8px 24px;
+}
+
+.pied a {
+  margin-right: 12px;
   color: var(--gris);
 }
 
-.pied-bas a {
-  margin-left: 14px;
-}
-
-/* ==============================
-   Téléphone et petite tablette
-   ============================== */
-@media (max-width: 900px) {
+/* Téléphone et petite tablette */
+@media (max-width: 800px) {
   h1 {
     font-size: 34px;
   }
 
   h2 {
-    font-size: 26px;
+    font-size: 25px;
   }
 
   .accueil h1 {
-    font-size: 44px;
+    font-size: 42px;
   }
 
   .accueil h1 span {
-    font-size: 22px;
-  }
-
-  .bloc-contact h2 {
-    font-size: 30px;
+    font-size: 21px;
   }
 
   .grille-2,
   .grille-3,
-  .grille-4,
-  .frise,
-  .certif,
-  .pied-colonnes {
+  .frise {
     grid-template-columns: 1fr;
   }
 
-  .entete-ligne {
-    flex-wrap: wrap;
-  }
-
-  .bouton-menu {
-    display: block;
-  }
-
-  .menu {
-    display: none;
-    width: 100%;
-  }
-
-  .menu.ouvert {
-    display: block;
-  }
-
-  .menu > ul {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .menu a.lien-contact {
-    margin-left: 0;
-    text-align: center;
-  }
-
-  .menu .sous-menu {
-    display: block;
-    position: static;
-    min-width: 0;
-    padding: 0 0 0 14px;
-    border: 0;
-  }
-
   table {
-    min-width: 620px;
-  }
-
-  .pied-bas a {
-    margin-left: 0;
-    margin-right: 14px;
+    min-width: 600px;
   }
 }
