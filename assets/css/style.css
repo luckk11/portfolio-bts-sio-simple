@@ -473,8 +473,10 @@ figcaption {
 
 .axe img {
   width: 100%;
+  aspect-ratio: 16 / 9; /* même hauteur pour les trois images */
   margin-bottom: 12px;
   border-radius: 6px;
+  object-fit: cover;
 }
 
 /* Tableaux */
