@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact — Luc Zhang, BTS SIO option SLAM</title>
+<meta name="description" content="Proposer un stage ou une alternance, poser une question sur un projet. Formulaire de contact et coordonnées de Luc Zhang, étudiant en BTS SIO option SLAM.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<a class="evitement" href="#contenu">Aller au contenu</a>
+
+<!-- #header -->
+<header class="entete">
+  <div class="conteneur entete-ligne">
+    <a class="logo" href="index.html">LZ</a>
+    <button class="bouton-menu" id="bouton-menu" type="button" aria-expanded="false">Menu</button>
+    <nav class="menu" id="menu" aria-label="Navigation principale">
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="profil.html">Profil</a></li>
+        <li><a href="bts-sio.html">BTS SIO</a></li>
+        <li class="parent">
+          <a href="competences.html">Compétences</a>
+          <ul class="sous-menu">
+            <li><a href="competences.html">Référentiel<span>Les compétences et leurs preuves</span></a></li>
+            <li><a href="certifications.html">Certifications</a></li>
+          </ul>
+        </li>
+        <li class="parent">
+          <a href="stage-1.html">Stage</a>
+          <ul class="sous-menu">
+            <li><a href="stage-1.html">1<sup>re</sup> année<span>ZENG Expertise — effectué</span></a></li>
+            <li><a href="stage-2.html">2<sup>e</sup> année<span>À venir</span></a></li>
+          </ul>
+        </li>
+        <li><a href="projets.html">Projets</a></li>
+        <li><a href="veille.html">Veille</a></li>
+        <li><a href="contact.html" aria-current="page" class="lien-contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<!-- /#header -->
+
+<main id="contenu">
+
+<section class="entete-page">
+  <div class="conteneur">
+    <p class="fil-ariane"><a href="index.html">Accueil</a> / Contact</p>
+    <h1>Contact</h1>
+    <p>Une proposition de stage ou d'alternance, une question sur un projet, ou simplement un échange : le formulaire ci-dessous arrive directement dans ma boîte.</p>
+    <ul class="infos">
+      <li>Réponse sous 48 heures</li>
+      <li>Paris et Île-de-France</li>
+      <li>Distanciel possible</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section">
+  <div class="conteneur grille-2">
+    <div class="carte">
+      <p class="etiquette">(01) — Écrire</p>
+      <h2>Le formulaire.</h2>
+      <form class="formulaire" id="form-contact">
+        <p class="message-envoi" id="message-envoi" role="status"></p>
+
+        <label for="nom">Nom et prénom *</label>
+        <input type="text" id="nom" name="nom" placeholder="Votre nom" required autocomplete="name">
+
+        <label for="email">Adresse e-mail *</label>
+        <input type="email" id="email" name="email" placeholder="vous@exemple.fr" required autocomplete="email">
+
+        <label for="organisation">Entreprise ou organisation</label>
+        <input type="text" id="organisation" name="organisation" placeholder="Facultatif" autocomplete="organization">
+
+        <label for="objet">Objet *</label>
+        <select id="objet" name="objet" required>
+          <option value="Proposition de stage">Proposition de stage</option>
+          <option value="Proposition d'alternance">Proposition d'alternance</option>
+          <option value="Question sur un projet">Question sur un projet</option>
+          <option value="Autre">Autre</option>
+        </select>
+
+        <label for="message">Message *</label>
+        <textarea id="message" name="message" placeholder="Le contexte, le poste, la période envisagée…" required></textarea>
+
+        <label class="case" for="rgpd">
+          <input type="checkbox" id="rgpd" name="rgpd" value="oui" required>
+          <span>J'accepte que mon nom et mon adresse e-mail soient utilisés pour répondre à ce message. Aucune autre exploitation n'en est faite. <a href="mentions-legales.html">En savoir plus</a> *</span>
+        </label>
+
+        <p class="espace-haut">
+          <button type="submit" class="bouton">Envoyer le message</button>
+        </p>
+        <p class="gris">Les champs marqués * sont obligatoires.</p>
+      </form>
+    </div>
+
+    <div class="pile">
+      <div class="carte">
+        <h3>Coordonnées</h3>
+        <div class="ligne-info"><span class="gris">E-mail</span><a href="mailto:zhg.luc2909@gmail.com">zhg.luc2909@gmail.com</a></div>
+        <div class="ligne-info"><span class="gris">Téléphone</span><a href="tel:+33619148683">06 19 14 86 83</a></div>
+        <div class="ligne-info"><span class="gris">Ville</span><b>Rosny-sous-Bois (93)</b></div>
+        <div class="ligne-info"><span class="gris">Mobilité</span><b>Paris et Île-de-France</b></div>
+        <div class="ligne-info"><span class="gris">Délai de réponse</span><b>48 heures</b></div>
+      </div>
+
+      <div class="carte">
+        <h3>Ailleurs</h3>
+        <ul class="liste-liens">
+          <li><a href="https://www.linkedin.com/in/luczhang8/">LinkedIn</a></li>
+          <li><a href="https://github.com/luckk11">GitHub</a></li>
+          <li><a href="https://www.pearltrees.com/lucque">Pearltrees</a></li>
+        </ul>
+      </div>
+
+      <div class="carte">
+        <h3>Le CV</h3>
+        <p class="gris">Parcours, formation, compétences et expériences sur une page.</p>
+        <a class="bouton" href="assets/docs/cv-luc-zhang.pdf" download>Télécharger le PDF</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section bloc-bleu">
+  <div class="conteneur">
+    <p class="etiquette">(02) — Avant d'écrire</p>
+    <h2>Ce qui est recherché.</h2>
+    <div class="grille-3">
+      <div>
+        <p class="etiquette">01</p>
+        <h3>Stage de 2<sup>e</sup> année</h3>
+        <p>Période fixée par l'ENC Bessières — <span class="todo">à préciser</span>. Développement back-end, données ou IA.</p>
+      </div>
+      <div>
+        <p class="etiquette">02</p>
+        <h3>Alternance</h3>
+        <p>La formation se déroule en initial, un passage en alternance reste possible pour la deuxième année.</p>
+      </div>
+      <div>
+        <p class="etiquette">03</p>
+        <h3>Échanges</h3>
+        <p>Questions sur le Crypto Analyser, sur l'architecture RAG ou sur le parcours : les messages sont les bienvenus.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- #footer -->
+<footer class="pied">
+  <div class="conteneur">
+    <div class="pied-colonnes">
+      <div>
+        <p class="logo">LZ</p>
+        <p class="gris">Luc Zhang — BTS SIO option SLAM<br>Rosny-sous-Bois, Île-de-France</p>
+      </div>
+      <nav aria-label="Pages du site">
+        <a href="profil.html">Profil</a>
+        <a href="bts-sio.html">BTS SIO</a>
+        <a href="competences.html">Compétences</a>
+        <a href="stage-1.html">Stage</a>
+        <a href="projets.html">Projets</a>
+        <a href="veille.html">Veille</a>
+        <a href="certifications.html">Certifications</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <nav aria-label="Liens externes">
+        <a href="https://www.linkedin.com/in/luczhang8/">LinkedIn</a>
+        <a href="https://github.com/luckk11">GitHub</a>
+        <a href="https://www.pearltrees.com/lucque">Pearltrees</a>
+        <a href="mailto:zhg.luc2909@gmail.com">E-mail</a>
+      </nav>
+    </div>
+    <div class="pied-bas">
+      <span>Dernière mise à jour : octobre 2026 — site écrit à la main en HTML, CSS et JavaScript, hébergé sur GitHub Pages</span>
+      <nav aria-label="Pages annexes">
+        <a href="a-propos.html">À propos du site</a>
+        <a href="mentions-legales.html">Mentions légales</a>
+        <a href="plan-du-site.html">Plan du site</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+<!-- /#footer -->
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
