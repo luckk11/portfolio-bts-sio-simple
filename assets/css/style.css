@@ -1,9 +1,13 @@
 /* Couleurs */
 :root {
   --bleu: #183FBA;
+  --bleu-fonce: #183FBA; /* reste foncé dans les deux thèmes */
   --bleu-vif: #4776F5; /* trop clair pour du texte : aplats uniquement */
   --bleu-pale: #AECBF5;
+  --fond: #FFFFFF;
   --fond-clair: #F0F4FE;
+  --fond-bloc: #183FBA;
+  --sur-bleu: #FFFFFF; /* texte posé sur un bouton bleu */
   --blanc: #FFFFFF;
   --texte: #121826;
   --gris: #4A5468;
@@ -14,6 +18,24 @@
   --orange-fond: #FAEEDA;
 }
 
+/* Thème sombre */
+[data-theme="dark"] {
+  color-scheme: dark;
+  --bleu: #6C93F7;
+  --bleu-pale: #8FB2F0;
+  --fond: #0B1020;
+  --fond-clair: #18213C;
+  --fond-bloc: #152A63;
+  --sur-bleu: #0B1020;
+  --texte: #EAEEF9;
+  --gris: #9BA7C2;
+  --bordure: #222E4F;
+  --vert: #34D399;
+  --vert-fond: #10382D;
+  --orange: #FBBF24;
+  --orange-fond: #3A2A08;
+}
+
 /* Base */
 * {
   box-sizing: border-box;
@@ -21,7 +43,7 @@
 
 body {
   margin: 0;
-  background: var(--blanc);
+  background: var(--fond);
   color: var(--texte);
   font-family: Inter, Arial, sans-serif;
   font-size: 17px;
@@ -88,7 +110,7 @@ img {
   top: 10px;
   padding: 10px 16px;
   background: var(--bleu);
-  color: var(--blanc);
+  color: var(--sur-bleu);
 }
 
 /* Mise en page */
@@ -145,6 +167,7 @@ img {
 }
 
 .logo {
+  margin-right: auto;
   color: var(--bleu);
   font-family: Poppins, Arial, sans-serif;
   font-size: 20px;
@@ -152,15 +175,21 @@ img {
   text-decoration: none;
 }
 
-.bouton-menu {
-  display: none;
-  padding: 8px 16px;
+.bouton-menu,
+.bouton-theme {
+  padding: 6px 12px;
   background: var(--fond-clair);
   border: 1px solid var(--bordure);
   border-radius: 6px;
   color: var(--texte);
   font: inherit;
+  font-size: 15px;
+  white-space: nowrap;
   cursor: pointer;
+}
+
+.bouton-menu {
+  display: none;
 }
 
 .menu ul {
@@ -199,7 +228,7 @@ img {
 .menu a.lien-contact:hover {
   margin-left: 8px;
   background: var(--bleu);
-  color: var(--blanc);
+  color: var(--sur-bleu);
 }
 
 /* Sous-menus de Compétences et de Stage */
@@ -211,7 +240,7 @@ img {
   z-index: 10;
   min-width: 270px;
   padding: 6px;
-  background: var(--blanc);
+  background: var(--fond);
   border: 1px solid var(--bordure);
   border-radius: 6px;
 }
@@ -262,7 +291,7 @@ img {
 
 /* Section sur fond bleu */
 .bloc-bleu {
-  background: var(--bleu);
+  background: var(--fond-bloc);
   color: var(--blanc);
 }
 
@@ -338,12 +367,12 @@ img {
 
 .tag-slam {
   background: var(--bleu);
-  color: var(--blanc);
+  color: var(--sur-bleu);
 }
 
 .bloc-bleu .tag {
   background: var(--blanc);
-  color: var(--bleu);
+  color: var(--bleu-fonce);
 }
 
 .statut {
@@ -371,20 +400,20 @@ img {
   padding: 10px 20px;
   background: var(--bleu);
   border-radius: 6px;
-  color: var(--blanc);
+  color: var(--sur-bleu);
   font-size: 16px;
   text-decoration: none;
 }
 
 .bouton-clair {
-  background: var(--blanc);
+  background: var(--fond);
   border: 1px solid var(--bleu);
   color: var(--bleu);
 }
 
 .bloc-bleu .bouton {
   background: var(--blanc);
-  color: var(--bleu);
+  color: var(--bleu-fonce);
 }
 
 progress {
@@ -511,12 +540,18 @@ th {
 
 /* Téléphone et petite tablette */
 @media (max-width: 900px) {
+  .bouton-theme {
+    order: 1;
+  }
+
   .bouton-menu {
     display: block;
+    order: 2;
   }
 
   .menu {
     display: none;
+    order: 3;
     width: 100%;
   }
 
