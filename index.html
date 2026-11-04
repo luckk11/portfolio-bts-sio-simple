@@ -14,13 +14,30 @@
 <header class="entete">
   <div class="conteneur entete-ligne">
     <a class="logo" href="index.html">LZ</a>
-    <nav class="menu" aria-label="Navigation principale">
-      <a href="index.html" aria-current="page">Accueil</a>
-      <a href="competences.html">Compétences</a>
-      <a href="stage-1.html">Stage</a>
-      <a href="projets.html">Projets</a>
-      <a href="veille.html">Veille</a>
-      <a href="contact.html">Contact</a>
+    <button class="bouton-menu" id="bouton-menu" type="button" aria-expanded="false">Menu</button>
+    <nav class="menu" id="menu" aria-label="Navigation principale">
+      <ul>
+        <li><a href="index.html" aria-current="page">Accueil</a></li>
+        <li><a href="profil.html">Profil</a></li>
+        <li><a href="bts-sio.html">BTS SIO</a></li>
+        <li class="parent">
+          <a href="competences.html">Compétences</a>
+          <ul class="sous-menu">
+            <li><a href="competences.html">Référentiel<span>Les compétences et leurs preuves</span></a></li>
+            <li><a href="certifications.html">Certifications</a></li>
+          </ul>
+        </li>
+        <li class="parent">
+          <a href="stage-1.html">Stage</a>
+          <ul class="sous-menu">
+            <li><a href="stage-1.html">1<sup>re</sup> année<span>ZENG Expertise — effectué</span></a></li>
+            <li><a href="stage-2.html">2<sup>e</sup> année<span>À venir</span></a></li>
+          </ul>
+        </li>
+        <li><a href="projets.html">Projets</a></li>
+        <li><a href="veille.html">Veille</a></li>
+        <li><a href="contact.html" class="lien-contact">Contact</a></li>
+      </ul>
     </nav>
   </div>
 </header>
@@ -62,57 +79,6 @@
 
 <section class="section bloc-bleu">
   <div class="conteneur">
-    <h2>Parcours</h2>
-    <div class="frise">
-      <div>
-        <p class="etiquette">2024</p>
-        <h3>Baccalauréat général</h3>
-        <p>Spécialités mathématiques et physique, option maths expertes</p>
-        <p>Lycée Charles de Gaulle, Rosny-sous-Bois — mention assez bien</p>
-      </div>
-      <div>
-        <p class="etiquette">2024 — 2025</p>
-        <h3>Licence informatique</h3>
-        <p>Université Paris 8, puis MIASHS à l'Université Gustave Eiffel de septembre à novembre 2025</p>
-      </div>
-      <div>
-        <p class="etiquette">Depuis nov. 2025</p>
-        <h3>BTS SIO — SLAM</h3>
-        <p>École Nationale de Commerce, Paris 17<sup>e</sup></p>
-        <p>Stage de 1<sup>re</sup> année chez ZENG Expertise, du 4 mai au 5 juin 2026</p>
-      </div>
-      <div>
-        <p class="etiquette">Objectif 2027</p>
-        <h3>Licence pro ou école</h3>
-        <p>Puis Data Analyst, et Data Scientist en IA</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="conteneur grille-2">
-    <div>
-      <h2>Le BTS SIO</h2>
-      <p>Le BTS Services Informatiques aux Organisations forme des professionnels capables de répondre aux besoins informatiques d'une entreprise : faire fonctionner ses services, développer les applications dont elle a besoin, et protéger ses données.</p>
-      <div class="note">
-        <b>Pourquoi SLAM.</b> Le choix s'est fait sans hésitation : l'objectif professionnel est la donnée et l'intelligence artificielle, deux domaines qui passent par le code et la base de données, pas par l'infrastructure.
-      </div>
-    </div>
-    <article class="carte">
-      <h3>Option SLAM</h3>
-      <p class="gris">Solutions Logicielles et Applications Métiers</p>
-      <ul>
-        <li>Conception et développement d'applications</li>
-        <li>Bases de données et gestion des données</li>
-        <li>Analyse du besoin et travail en mode projet</li>
-      </ul>
-    </article>
-  </div>
-</section>
-
-<section class="section bloc-bleu">
-  <div class="conteneur">
     <h2>Deuxième année</h2>
     <p>Recherche en cours pour la deuxième année de BTS, en développement back-end, données ou IA.</p>
     <a class="bouton" href="contact.html">Échanger</a>
@@ -133,9 +99,10 @@
     </nav>
   </div>
   <div class="conteneur">
-    Dernière mise à jour : novembre 2026 — site écrit à la main en HTML et CSS, hébergé sur GitHub Pages
+    Dernière mise à jour : novembre 2026 — site écrit à la main en HTML, CSS et JavaScript, hébergé sur GitHub Pages
   </div>
 </footer>
 
+<script src="assets/js/main.js"></script>
 </body>
 </html>

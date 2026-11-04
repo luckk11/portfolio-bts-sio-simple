@@ -103,7 +103,8 @@ img {
 }
 
 .grille-2,
-.grille-3 {
+.grille-3,
+.grille-4 {
   display: grid;
   gap: 20px;
 }
@@ -114,6 +115,10 @@ img {
 
 .grille-3 {
   grid-template-columns: repeat(3, 1fr);
+}
+
+.grille-4 {
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .espace-haut {
@@ -147,13 +152,36 @@ img {
   text-decoration: none;
 }
 
-.menu {
+.bouton-menu {
+  display: none;
+  padding: 8px 16px;
+  background: var(--fond-clair);
+  border: 1px solid var(--bordure);
+  border-radius: 6px;
+  color: var(--texte);
+  font: inherit;
+  cursor: pointer;
+}
+
+.menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.menu > ul {
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
   gap: 4px;
 }
 
+.menu li {
+  position: relative;
+  margin: 0;
+}
+
 .menu a {
+  display: block;
   padding: 6px 12px;
   border-radius: 6px;
   color: var(--texte);
@@ -165,6 +193,38 @@ img {
 .menu a[aria-current="page"] {
   background: var(--fond-clair);
   color: var(--bleu);
+}
+
+.menu a.lien-contact,
+.menu a.lien-contact:hover {
+  margin-left: 8px;
+  background: var(--bleu);
+  color: var(--blanc);
+}
+
+/* Sous-menus de Compétences et de Stage */
+.menu .sous-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 10;
+  min-width: 270px;
+  padding: 6px;
+  background: var(--blanc);
+  border: 1px solid var(--bordure);
+  border-radius: 6px;
+}
+
+.menu .parent:hover .sous-menu,
+.menu .parent:focus-within .sous-menu {
+  display: block;
+}
+
+.sous-menu span {
+  display: block;
+  color: var(--gris);
+  font-size: 15px;
 }
 
 /* Hauts de page */
@@ -230,6 +290,10 @@ img {
 
 .carte p:last-child {
   margin-bottom: 0;
+}
+
+.carte-bleue {
+  border: 2px solid var(--bleu);
 }
 
 .note {
@@ -446,7 +510,38 @@ th {
 }
 
 /* Téléphone et petite tablette */
-@media (max-width: 800px) {
+@media (max-width: 900px) {
+  .bouton-menu {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+    width: 100%;
+  }
+
+  .menu.ouvert {
+    display: block;
+  }
+
+  .menu > ul {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .menu a.lien-contact {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .menu .sous-menu {
+    display: block;
+    position: static;
+    min-width: 0;
+    padding: 0 0 0 14px;
+    border: 0;
+  }
+
   h1 {
     font-size: 34px;
   }
@@ -465,6 +560,7 @@ th {
 
   .grille-2,
   .grille-3,
+  .grille-4,
   .frise {
     grid-template-columns: 1fr;
   }

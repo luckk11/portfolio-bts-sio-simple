@@ -14,13 +14,30 @@
 <header class="entete">
   <div class="conteneur entete-ligne">
     <a class="logo" href="index.html">LZ</a>
-    <nav class="menu" aria-label="Navigation principale">
-      <a href="index.html">Accueil</a>
-      <a href="competences.html" aria-current="page">Compétences</a>
-      <a href="stage-1.html">Stage</a>
-      <a href="projets.html">Projets</a>
-      <a href="veille.html">Veille</a>
-      <a href="contact.html">Contact</a>
+    <button class="bouton-menu" id="bouton-menu" type="button" aria-expanded="false">Menu</button>
+    <nav class="menu" id="menu" aria-label="Navigation principale">
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="profil.html">Profil</a></li>
+        <li><a href="bts-sio.html">BTS SIO</a></li>
+        <li class="parent">
+          <a href="competences.html" aria-current="page">Compétences</a>
+          <ul class="sous-menu">
+            <li><a href="competences.html">Référentiel<span>Les compétences et leurs preuves</span></a></li>
+            <li><a href="certifications.html">Certifications</a></li>
+          </ul>
+        </li>
+        <li class="parent">
+          <a href="stage-1.html">Stage</a>
+          <ul class="sous-menu">
+            <li><a href="stage-1.html">1<sup>re</sup> année<span>ZENG Expertise — effectué</span></a></li>
+            <li><a href="stage-2.html">2<sup>e</sup> année<span>À venir</span></a></li>
+          </ul>
+        </li>
+        <li><a href="projets.html">Projets</a></li>
+        <li><a href="veille.html">Veille</a></li>
+        <li><a href="contact.html" class="lien-contact">Contact</a></li>
+      </ul>
     </nav>
   </div>
 </header>
@@ -137,29 +154,6 @@
   </div>
 </section>
 
-<section class="section">
-  <div class="conteneur">
-    <h2>Certifications</h2>
-    <div class="grille-3">
-      <article class="carte">
-        <span class="statut statut-ok">Validée</span>
-        <h3>MOOC de l'ANSSI — RGPD</h3>
-        <p class="gris">ANSSI · 2026</p>
-      </article>
-      <article class="carte">
-        <span class="statut statut-ok">Validée</span>
-        <h3>Relational Database</h3>
-        <p class="gris">freeCodeCamp · 2026</p>
-      </article>
-      <article class="carte">
-        <span class="statut statut-attente">En progression</span>
-        <h3>PIX — 509 points</h3>
-        <p class="gris">PIX</p>
-      </article>
-    </div>
-  </div>
-</section>
-
 </main>
 
 <footer class="pied">
@@ -174,9 +168,10 @@
     </nav>
   </div>
   <div class="conteneur">
-    Dernière mise à jour : novembre 2026 — site écrit à la main en HTML et CSS, hébergé sur GitHub Pages
+    Dernière mise à jour : novembre 2026 — site écrit à la main en HTML, CSS et JavaScript, hébergé sur GitHub Pages
   </div>
 </footer>
 
+<script src="assets/js/main.js"></script>
 </body>
 </html>
